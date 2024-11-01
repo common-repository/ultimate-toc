@@ -1,0 +1,181 @@
+html {
+    scroll-behavior: smooth;
+}
+.toc-heading{
+    font-weight: 500;
+    font-size: 120%;
+    display: contents;
+    text-align: left;
+    line-height: 1.45;
+    margin: 0;
+    padding: 0;
+}
+.table-of-content {
+    max-width: 500px;
+    margin: 1em auto;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    display: table;
+    position: relative;
+    width: auto;
+}
+.table-of-content sup {
+    font-size: 11px;
+    padding-left: 1px;
+}
+/* Style 1 */
+ul.toc-list-style {
+    list-style: none;
+    padding-left: 0px;
+}
+ul.toc-list-style .pl-0 {
+    padding-left: 0px;
+    font-size: 18px;
+}
+ul.toc-list-style .pl-10 {
+    padding-left: 10px;
+    font-size: 16px;
+}
+ul.toc-list-style .pl-20 {
+    padding-left: 20px;
+    font-size: 14px;
+}
+ul.toc-list-style .pl-30 {
+    padding-left: 30px;
+    font-size: 13px;
+}
+ul.toc-list-style .pl-40 {
+    padding-left: 40px;
+    font-size: 12px;
+}
+ul.toc-list-style .pl-50 {
+    padding-left: 50px;
+    font-size: 11px;
+}
+ul.toc-list-style li a:visited {
+    color: #9f9f9f;
+}
+ul.toc-list-style li a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/*Style 2*/
+
+.toc-collapse-wrapper p.toc-heading {
+    padding-right: 10px;
+    display: inline-block;
+}
+.toc-collapse-wrapper span{
+    cursor: pointer;
+}
+.toc-collapse ul.toc-ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.toc-collapse ul.toc-ul li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+}
+
+/*Style 3*/
+
+.toc-table-wrapper table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    vertical-align: middle;
+    width: 100%;
+    margin-top: 10px;
+}
+.toc-table-wrapper table tbody td, .toc-table-wrapper table thead th {
+    border: 1px solid rgb(170 170 170 / 41%);
+    padding: 8px;
+    position: relative;
+    font-size: 14px;
+}
+.toc-table-wrapper table tbody td a {
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.toc-table-wrapper .table tr:nth-child(odd) {
+    background-color: #2a2f42;
+}
+.toc-table-wrapper .table tr:nth-child(even) {
+    background-color: #1b223b;
+}
+
+/*Style 4*/
+
+ul.toc-fixed-style {
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+}
+ul.toc-fixed-style li {
+    width: 50%;
+    display: inline-block;
+}
+ul.toc-fixed-style li a {
+    font-size: 14px;
+    text-decoration: none;
+    padding-bottom: 2px;
+    text-transform: capitalize;
+    transition: .6s;
+}
+ul.toc-fixed-style li a:visited{
+    color: #0000004d;
+}
+ul.toc-fixed-style li a:hover {
+    border-bottom: 1px solid #0000004d;
+    padding-left: 5px;
+}
+.toc-fixed-style-wrapper.fixed-me{
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    background: #f9f9f9;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    padding: 5px;
+    width: auto;
+    z-index: 2;
+}
+.toc-fixed-style-wrapper.fixed-me ul.toc-fixed-style li {
+    width: 100%;
+    display: block;
+}
+.toc-fixed-style-wrapper.fixed-me ul.toc-fixed-style li {
+    line-height: 16px;
+}
+.toc-fixed-style-wrapper.fixed-me ul.toc-fixed-style li a {
+    font-size: 12px;
+    border-bottom: 1px solid #0000004d;
+    padding-bottom: 0px;
+}
+.toc-fixed-style-wrapper.fixed-me ul.toc-fixed-style li a:hover{
+    padding-left: 0px;
+}
+@media only screen and (max-width: 768px)  {
+    .toc-fixed-style-wrapper.fixed-me .toc-heading{
+        font-size: 0px;
+    }
+    .toc-fixed-style-wrapper.fixed-me .toc-heading::before {
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z"/> </g> </svg>');
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        color: #000;
+        right: 8px;
+    }
+}
